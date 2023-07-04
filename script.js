@@ -9,14 +9,15 @@ document.getElementById("btn").addEventListener("click",function(){
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
     .then((response)=>response.json()) //manobra a tirada do axios
     .then((dados)=>{
-        document.getElementById("box").style.display="block";
-       for(let d in dados){
-       
-        if(!dados[d]) dados[d]="[Não disponível]";
-       }
-        resposta.innerHTML=dados.cep+"<br><br>Logradouro: "+dados.logradouro+"<br>Complemento: "
-        +dados.complemento+"<br>Bairro: "+dados.bairro+"<br> Cidade: "+dados.localidade+
-        "<br>Estado: "+dados.uf+"<br>Código Fone: "+"("+dados.ddd+")";
+        if(dados.cep!=undefined){
+            for(let d in dados){
+                 if(!dados[d]) dados[d]="[Não disponível]";
+            }
+                resposta.innerHTML=dados.cep+"<br><br>Logradouro: "+dados.logradouro+"<br>Complemento: "
+                +dados.complemento+"<br>Bairro: "+dados.bairro+"<br> Cidade: "+dados.localidade+
+                "<br>Estado: "+dados.uf+"<br>Código Fone: "+"("+dados.ddd+")";
+                document.getElementById("box").style.display="block";
+        }else alert("CEP inválido")
     }).catch((err)=>{
     console.log(err)
 });
