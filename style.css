@@ -1,0 +1,45 @@
+body{
+    background-image: linear-gradient(to right,#FFD700,#DAA520);
+}
+#consult{
+    border:1px solid black;
+    max-width: 250px;
+    text-align: center;
+    margin: 100px auto;
+    border-radius: 10px;
+    background-color:#DAA520;
+}
+#cep{
+    text-align: center;
+    padding: 10px 0px;
+    font-size: large;
+    border-radius: 10px;
+    background-color: aliceblue;
+   outline: none;
+}
+#cep:focus{
+    background-color: #FFE4c4; 
+}
+#btn{
+   
+    padding: 10px 20px;
+    color:white;
+    background-color: #00008b;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color: #191970;
+}
+#box{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center; 
+    font-weight: bold;
+    border-radius: 10px;
+    max-width: 250px;
+    margin: 0 auto;
+    display: none;
+}
