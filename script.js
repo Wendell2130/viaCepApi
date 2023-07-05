@@ -21,6 +21,10 @@ document.getElementById("btn").addEventListener("click",function(){
     }).catch((err)=>{
     console.log(err)
 });
+
+document.querySelector("#close").addEventListener("click",function(){
+    document.getElementById("box").style.display="none";
+});
     
 });
 document.getElementById("cep").addEventListener("keyup",function(e){

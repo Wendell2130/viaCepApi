@@ -1,15 +1,15 @@
 body{
-    background-image: linear-gradient(to right,#a9A9a9,#1d2a35);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 9));
 }
 #consult{
-    border:1px solid white;
+   
     max-width: 250px;
     text-align: center;
     margin: 100px auto;
     border-radius: 10px;
-    background-color:#1d2a35;
+    background: rgba(0, 0, 0, 0.5);
     color:white;
-   
+    transition:all 1s;
 }
 #cep{
     text-align: center;
@@ -39,6 +39,7 @@ body{
     background-color: #191970;
 }
 #box{
+    position:relative;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     text-align: center; 
@@ -47,7 +48,27 @@ body{
     max-width: 250px;
     margin: 0 auto;
     display: none;
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
+    transition:all 1s;
+}
+#box:hover,#consult:hover{
+    background: rgba(0, 0, 0, 1);
 }
 #cep:focus body{
     background-color: #00008b;
- }  
+ } 
+ #close{
+    position:absolute;
+    right:0;
+    color:white;
+    font-weight: bold;
+    background-color: rgba(139, 0, 0, .5);
+    border:none;
+    border-radius: 10px;
+    padding: 10px 20px;
+ }
+ #close:hover{
+    background-color: rgba(139, 0, 0, 1);
+    cursor:pointer;
+ }
